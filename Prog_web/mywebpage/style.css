@@ -1,0 +1,34 @@
+.random_text{
+  margin: auto;
+  background-color: green;
+  color: blue;
+}
+h2.empattement{
+  margin: auto;
+  color: #404040;
+  font-family: sans-serif;
+  column-count: 2;
+  border-left-color: azure;
+}
+a:hover{
+  background-color: cyan;
+}
+a:visited{
+  margin:100px;
+  color: green;
+}
+h1{
+  width: 300px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px;
+ font-size: 5em;
+}
+
+.illustration{
+margin-top: 20px;  
+}
+
+body{
+  background-color: darkblue;
+}

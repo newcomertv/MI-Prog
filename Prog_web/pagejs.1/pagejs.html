@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doodling with javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .image {
+            position: relative;
+        }
+
+        .description {
+            display: none;
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            padding: 10px;
+            font-family: sans-serif;
+            background-color: #000;
+            color: #fff;
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="http://lorempixel.com/400/200/" alt="Mon image" />
+        <p class="description">La description de l’image</p>
+    </div>
+
+    <input type="text" id="firstProf"><input type="text" id="firstTitle"> <br> <br> <br>
+
+    <input type="text" id="secondProf"><input type="text" id="secondTitle">
+    <input type="button" onClick="newCours()">This is a buttton</button>
+
+    <script src="pagejs.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+GOALS:
+doorbell that rings upon | button.x == keypress.true | sending client.x livefeed from camera.door and establishes VOIP  connection between client.door and client.x
+
+PROGRAM COMPONENTS:
+FUNCTIONS:  
+connect(user)       --> start VOIP and video feed between client.door and client.user 
+disconnect()        --> end all VOIP and video feed connections from door.client
+VOIP(user)          --> launches VOIP connection between door.client and user.client
+callrequest(user)   --> notifies client.user that client.door requests a connection
+ring(user)          --> sends ringing signal to bell.user
+notify(user)        --> sends mobile phone notification  // to be specified
+open(adress)        --> sends opening signal to opener.adress
+identify(button)    --> identifies user related to | button.x == keypress.true | returning user
+phoneadress(user)   --> returns phoneadress of user
+connection_error()  --> activates speaker with "error.mp3"

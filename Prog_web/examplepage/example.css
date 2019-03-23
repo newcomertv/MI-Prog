@@ -1,0 +1,27 @@
+ul{
+    display: flex;
+    float: left;
+    flex-direction: column;
+    column-count: 2;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    color: black;
+}
+
+main{
+    text-align: center;
+    display: flex;
+    display: inline-block;
+    margin-left: auto;
+}
+
+header{
+    text-align: center;
+
+    display: flex;
+display: block;    
+}

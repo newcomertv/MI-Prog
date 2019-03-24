@@ -13,4 +13,7 @@ primetestaux (n,count) = if count == 1 then True
                             else if ((n `mod` count) == 0) then False
                                     else primetestaux (n,count-1)
 
-division (a,b)= if 
+
+add x y = x+y
+
+lel = add 12

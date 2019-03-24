@@ -1,10 +1,5 @@
 carre x = x*x
 
-p=(xp,yp)
-
-fst p = xp
-
-snd p = yp
 
 milieu p1 p2 = let xm = ((fst p1) + (fst p2)) / 2.0 in let ym = ((snd p1)+(snd p2))/2.0 in (xm,ym)
 

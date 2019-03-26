@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+
+    <meta name="description" content="Formulaire de contact" /> <!-- Très utile -->
+    <meta name="author" content="Hugo Zilliox" /> <!-- Peu utile -->
+    <meta name="keywords" content="CV, égocentrisme, TP, web, hugo zilliox" /> <!-- Totalement obsolète -->
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="tp3.css">
+    <script>
+        $(document).ready(function () {
+            console.log("ready")
+            $(".boutonSoumission").click(function () {
+                console.log("click")
+                let unit = $("#unite").val()
+                let val = $("#valeur").val()
+                let res = $("#resultat").val()
+                let calc = 0
+                switch (unit) {
+                    case "cm":
+                        calc = Math.round(val * 2.54 * 100) / 100;
+                        $("#resultat").text(val + " pouce(s) = " + calc + " centimètre(s)");
+                        break;
+                    case "pc":
+                        calc = Math.round(val / 2.54 * 100) / 100;
+                        $("#resultat").text(val + " centimètre(s) = " + calc + " pouce(s)");
+                        break;
+                    case "l":
+                        calc = Math.round(val / 453.6 * 100) / 100;
+                        $("#resultat").text(val + " gramme(s) = " + calc + " livre(s)");
+                        break;
+                    case "g":
+                        calc = Math.round(val * 453.6 * 100) / 100;
+                        $("#resultat").text(val + " livre(s) = " + calc + " gramme(s)");
+                        break;
+                }
+            })
+
+        })</script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>TP3</h1>
+        <h2>Javascript Vanilla</h2>
+    </header>
+
+    <main>
+        <section>
+            <h3>Partie 1</h3>
+
+            <div id="affichageTableau"></div>
+        </section>
+        <section>
+            <h3>Partie 2</h3>
+
+            <div class="formLine">
+                <label for="valeur">Valeur</label><br />
+                <input type="number" name="valeur" id="valeur" placeholder="Ex: 19" />
+            </div>
+            <div class="formLine">
+                <label for="comment">Unité</label><br />
+                <select id="unite" name="unite">
+                    <option value="cm">Centimètre</option>
+                    <option value="pc">Pouce</option>
+                    <option value="g">Gramme</option>
+                    <option value="l">Livre</option>
+                </select>
+            </div>
+            <div class="formLine">
+                <input type="button" class="boutonSoumission" value="Convertir" />
+            </div>
+
+
+            <p id="resultat"></p>
+        </section>
+    </main>
+
+    <footer id="footer">
+        Dernière mise à jour le 12 mars 2019
+    </footer>
+</body>
+
+<!-- <script type="text/javascript" src="tp3.js"></script> -->
+
+</html>

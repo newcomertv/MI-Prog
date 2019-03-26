@@ -1,0 +1,56 @@
+body {
+	font-family: sans-serif;
+}
+
+form {
+	display: block;
+	max-width: 700px;
+	width: auto;
+	margin: 10px auto;
+	background: #efefef;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.formLine + .formLine {
+	margin-top: 5px;
+}
+
+form label {
+	font-size: .8em;
+	font-style: oblique;
+}
+
+input, select {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+input.boutonSoumission {
+	margin: 10px 0;
+	background: transparent;
+	color: #222;
+	border: 2px solid;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px;
+	border-radius: 3em;
+	transition: color .3s ease-in-out, background .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+input.boutonSoumission:hover {
+	background: #222;
+	color: #ccc;
+	border-color: #222;
+}
+
+#resultat {
+	text-align: center;
+}
+
+#footer {
+	text-align: center;
+}

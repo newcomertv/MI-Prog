@@ -1,8 +1,9 @@
 .dropdown-hover {
-   float: right;
+    float: right;
+    float: top;
     text-align: right;
-    position: relative;
-    display: inline-block;
+    /* position: relative; */
+    /* display: inline-block; */
   }
   
   .dropdown-list {
@@ -18,10 +19,7 @@
   .dropdown-hover:hover .dropdown-list {
     display: block;
   }
-  .space{
-      width: 10px;
-  }
-
+ 
   .horizontal{
       display: flex;
       flex-direction: row;

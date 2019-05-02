@@ -24,9 +24,9 @@ reverse_list(l)=case l of
                 t:q->add_el_in_list(t,reverse_list(q))
 
 
-add_el_in_list(e,l)= case l of 
-                [] -> [e]
-                t:q -> q:(add_el_in_list(e,t))
+--add_el_in_list(e,l)= case l of 
+--                [] -> [e]
+--                t:q -> q:(add_el_in_list(e,t))
 
 
 
@@ -35,6 +35,7 @@ concatener(l1,l2)= case l1 of
                 t1:q1-> t1:(concatener(q1,l2)) 
 
 
+aplatir = foldr (\x -> \l -> [x]++l) [] 
 
 
 union(l1,l2)=case l1 of 
@@ -64,13 +65,13 @@ difference(l1,l2)= case l1 of
 egal(l1,l2)= inclus l1 l2 && inclus l2 l1
 
 
-ajouter_el_ll e l=case lof 
+ajouter_el_ll e l=case l of 
                   [] -> []
                   t:q ->(e:t):(ajouter_el_ll e q)
+
 ensemble_des_parties(l)=case l of
                         []->[[]]
-                        t:q-> 
-               let pe' = ensemble_des_parties q in concatener(pe',ajouter_el_ll(t,pe')) 
+                        t:q-> let pe' = ensemble_des_parties q in concatener(pe',ajouter_el_ll(t,pe')) 
 
 permut l1= case l of 
             [] -> []

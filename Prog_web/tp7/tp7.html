@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TP7 - ToDo List et localStorage</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <h1>TP7 - ToDo List et localStorage</h1>
+
+        <div class="form">
+            <label for="task">Nouvelle tâche :</label>
+            <input type="text" name="task" id="newTask" placeholder="Ex: Terminer mes TP d'ipweb avant le TP suivant" />
+            <button id="addTask">Ajouter</button>
+        </div>
+
+        <ul id="todolist"></ul>
+
+        <footer>
+            <button id="save">Sauvegarder</button>
+            <button id="load">Charger</button>
+        </footer>
+    </main>
+
+
+    <!-- CDN JQUERY, le fichier est hébergé sur un serveur spécifique différent de la page actuelle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

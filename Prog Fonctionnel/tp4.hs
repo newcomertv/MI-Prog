@@ -1,10 +1,11 @@
+data Tree a = Leaf | Branch (Tree a) a (Tree a)
 
-type arbre = feuille | branche of int * arbre * arbre
 
-type ’a arbre = feuille | branche of ’a * ’a arbre * ’a arbre
+example = ((Branch (Leaf) 5 Branch (Branch 3 1 Branch (Leaf 6 Leaf)))
 
-taille a =
-case of a
-feuille -> 0
-| branche(_,g,d) ->
-1 + taille g + taille d
+maximum_Tree x = case x of {
+Leaf -> 0;
+Branch a b c -> if (b > maximum_Tree a) && (b > maximum_Tree c) then b 
+                                        else if (maximum_Tree a > maximum_Tree c) then maximum_Tree a
+                                                else maximum_Tree c
+                                                }

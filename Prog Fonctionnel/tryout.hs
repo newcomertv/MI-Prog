@@ -18,3 +18,22 @@ data Carte = As Couleur
     | Petite Integer Couleur
 
 
+
+
+data Tree a = Tip | Node  a (Tree a)  (Tree a)
+
+
+data Btree = Tete a 
+            Queue a (Btree a) a (Btree a)
+
+depth Tip = 0
+depth (Node _ l r) = 1 + max (depth l) (depth r)
+
+
+somme x y = x + y
+
+plus25 x = somme 25
+
+
+
+

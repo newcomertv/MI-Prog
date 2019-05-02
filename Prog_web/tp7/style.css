@@ -1,0 +1,96 @@
+/* Rappel pour la propriÃ©tÃ© box-sizing : https://la-cascade.io/box-sizing-pour-les-nuls/ */
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  /* Comprendre les couleurs en rgba : https://www.w3schools.com/cssref/func_rgba.asp */
+  body {
+    background-color: rgba(106, 137, 204,.1);
+    font-family: sans-serif;
+    color: rgba(30, 55, 153,1.0);
+  }
+  
+  /* Comprendre box-shadow : https://la-cascade.io/box-shadow/ */
+  main {
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    font-weight: 300;
+    font-style: italic;
+    font-size: .8em;
+    margin-bottom: 5px;
+    display:block;
+  }
+  
+  input {
+    color: rgba(30, 55, 153,1.0);
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid;
+  }
+  
+  button {
+    margin-top: 10px;
+    width: 100%;
+    background: rgba(30, 55, 153,1.0);
+    color: white;
+    padding: 5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid rgba(30, 55, 153,1.0);
+  }
+  
+  /* Rappel du TP2 : hover ! https://developer.mozilla.org/fr/docs/Web/CSS/:hover */
+  button:hover {
+    background: transparent;
+    color: rgba(30, 55, 153,1.0);
+  }
+  
+  /* Suppression des points devant les Ã©lÃ©ments d'une liste grÃ¢ce Ã  list-style-type: none; */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    line-height: 3em;
+    font-weight: 600;
+  }
+  
+  /* Comprendre le sÃ©lecteur + en css : https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 
+   Dans l'exemple ci-dessous Ã§a nous permet de sÃ©lectionner tous les li qui suivent un autre li. Donc tous les Ã©lÃ©ments de notre liste, sauf le premier. On y applique alors une bordure qui sÃ©parera les Ã©lÃ©ments
+   */
+  li + li {
+    border-top: 1px solid;
+  }
+  
+  li.done {
+    text-decoration: line-through;
+    font-style: italic;
+    font-weight: 300;
+    opacity: .5;
+  }
+  
+  /* Rappel des pseudo Ã©lÃ©ments : https://la-cascade.io/les-pseudo-elements-css-before-et-after/ */
+  li.done:before {
+    content:  "\2713   ";
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+  }
+  
+  footer {
+    display: flex;
+  }

@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+    font-style: italic;
+    width: 30em;
+    height: 4em;
+}
+
+li{
+    color: cadetblue;
+    background-color: gray;
+}
+
+li.done{
+    color: rebeccapurple;
+    background-color: darkgrey;
+    text-decoration: line-through;
+}

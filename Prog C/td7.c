@@ -1,4 +1,7 @@
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
 
 int **mat_function(int **original, int size)
 {
@@ -149,4 +152,5 @@ polynome *addition_polynome(polynome *p1, polynome *p2)
 
 polynome *produit_polynome(polynome *p1, polynome *p2)
 {
+    polynome *p3 = new_poly(p1->n * p2->n);
 }

@@ -1,0 +1,116 @@
+/* CSS TP1 */
+body {
+	font-family: sans-serif;
+}
+
+h2.empattement {
+	font-family: serif;
+}
+
+.avecserif {
+	font-size: 2em;
+}
+
+p {
+	font-family: sans-serif;
+	color: #404040;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: sans-serif;
+	text-align: left; 
+	margin: 0;
+	padding: 10px 0;
+}
+
+nav a:hover {
+	text-transform: uppercase;
+}
+
+nav a:visited {
+	color:red;
+}
+
+footer {
+	font-size: .7em;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+/* FIN CSS TP1 */
+
+/* CSS TP2 */
+
+body {
+	margin: 0px; 
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* 
+ * Concernant les 2 rÃ¨gles ci-dessus :
+ * n'hÃ©sitez pas Ã  utiliser un reset : https://www.alsacreations.com/astuce/lire/36-la-technique-du-reset-css.html 
+ * un exemple avec commentaires d'explication : https://github.com/necolas/normalize.css/blob/master/normalize.css
+ */
+
+header {
+	background-color: rgba(0, 0, 100, .1);
+	text-align: center;
+}
+
+nav, aside, main {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	padding: 10px;
+	margin: 10px;
+}
+
+nav, aside {
+	width: calc(20% - 20px); /* 2 x 10px pour les marges gauche et droite */
+	background-color: rgba(0, 0, 255, .1);
+}
+
+aside {
+	background-color: rgba(255,0,0,.1);
+}
+
+main {
+	width: calc(60% - 20px);
+	background-color: rgba(0,255,0, .1);
+}
+
+footer {
+	background-color: rgb(138,43,226, .1);
+}
+
+section p img {
+	margin: 10px;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+/* Les mediaqueries : https://www.alsacreations.com/article/lire/930-css3-media-queries.html */
+@media (max-width: 960px) {
+  nav, aside {
+  	margin: 5px;
+  	padding: 5px;
+    width: calc(30% - 10px);
+  }
+
+  main {
+  	margin: 5px;
+  	padding: 5px;
+  	width: calc(40% - 10px);
+  }
+}

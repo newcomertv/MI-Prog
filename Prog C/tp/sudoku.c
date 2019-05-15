@@ -172,3 +172,43 @@ int complete_grille_une_etape(grille exemple)
     }
     return 1;
 }
+
+void complete_grille(grille remplir)
+{
+    int count = 9, ligne[9], colonne[9], bloc[9], solution, one_more_time;
+    while (one_more_time < count)
+    {
+        /* code */
+
+        for (int i = 0; i < count; i++)
+        {
+            for (int j = 0; j < count; j++)
+            {
+                /* code */
+
+                if (remplir[i][j] == 0)
+                {
+                    calcul_ligne_colonne_bloc(remplir, ligne, colonne, bloc, i, j);
+                    remplir[i][j] = unique_solution(ligne, colonne, bloc);
+                }
+            }
+            /* code */
+        }
+        one_more_time++;
+    }
+}
+
+int est_resolu(grille test)
+{
+    int i = 0, j = 0;
+    while (i < 9)
+    {
+        while (j < 9)
+        {
+            if (test[i][j] == 0)
+                return 1;
+            /* code */
+        }
+    }
+    return 0;
+}

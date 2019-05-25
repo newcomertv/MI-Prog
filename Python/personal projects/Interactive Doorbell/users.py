@@ -21,6 +21,23 @@ def add_user(user):
         userlist.append(user)
 
 
-add_user(default)
+def rm_user(var):
+        if(len(userlist) < var):
+                userlist[var-1]=default
 
-print(userlist[0])
+
+def uprint(user):
+        print(user.name)
+        print(user.apartment)
+        print(user.phonenumber)
+        print(user.button)
+
+
+
+tester=User("placeholer", 2,2,2)
+
+add_user(default)
+add_user(tester)
+
+uprint(userlist[1])
+uprint(default)
